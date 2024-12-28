@@ -4,6 +4,9 @@ const cors =require('cors')
 const ProductRoutes =require("./Routes/ProductRoutes");
 const UserRoutes =require("./Routes/UserRoute");
 const CartRoutes =require("./Routes/CartRoutes");
+const PurchasertRoutes =require("./Routes/PurchaserRoutes");
+
+
 
 const app=express()
 app.use(express.json());
@@ -12,6 +15,7 @@ app.use(cors())
 app.use("/product",ProductRoutes)
 app.use("/user",UserRoutes)
 app.use("/cart",CartRoutes)
+app.use("/purchaser",PurchasertRoutes)
 
 app.get("/",(req,res)=>{
 
